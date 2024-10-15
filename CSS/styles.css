@@ -1,0 +1,115 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+}
+
+.titulo-opulence {
+    font-family: 'Urbanist', sans-serif;
+}
+
+.bienvenida {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+header {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+}
+
+.header-image {
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+.lbl-menu {
+    background: #234;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.lbl-menu label {
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background 400ms ease;
+}
+
+.lbl-menu label:hover {
+    background: #28435d;
+}
+
+.content {
+    position: relative;
+    display: flex;
+}
+
+.container2 {
+    min-width: 90%;
+    display: flex;
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex-direction: row;
+    display: inline-block;
+}
+
+.descripcion {
+    width: 45%; /* Establece el ancho de la descripción */
+    flex: 1;
+    text-align: justify;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna para apilar h2 y p */
+    float: left; /* Permite que la descripción flote a la izquierda */
+}
+
+.descripcion h2 {
+    margin-bottom: 10px; /* Ajusta el espacio debajo del título */
+    font-family: 'Urbanist', sans-serif;
+}
+
+.descripcion p {
+    margin-top: 0; /* Elimina el margen superior del párrafo */
+    margin-bottom: 10px; /* Ajusta el margen inferior del párrafo */
+}
+
+
+.mueble-img {
+    width: 50%;
+    flex: 1;
+    width: 50%; /* Asegura que la imagen no exceda su contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 10px;
+    float: right;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #35424a;
+    color: #ffffff;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
