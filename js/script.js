@@ -5,30 +5,28 @@ let muebles = {};
 
 function gestionarMuebles() {
     // Obtener referencias a los elementos de los muebles
+    muebles['como'] = document.getElementById('como');
+    muebles['como-ideal'] = document.getElementById('como-ideal');
     muebles['mueble1'] = document.getElementById('mueble1');
     muebles['mueble2'] = document.getElementById('mueble2');
     muebles['mueble3'] = document.getElementById('mueble3');
 
-    // Ocultar todos los muebles al iniciar, excepto el primero
-    for (let key in muebles) {
-        muebles[key].style.display = 'none';
-    }
-    muebles['mueble1'].style.display = 'block';
-
-    // Agregar eventos a los botones de los muebles
+    // Asignar eventos a los labels para mostrar/ocultar las secciones
+    document.getElementById('como-tab').addEventListener('click', () => mostrarMueble('como'));
+    document.getElementById('como-ideal-tab').addEventListener('click', () => mostrarMueble('como-ideal'));
     document.getElementById('mueble1-tab').addEventListener('click', () => mostrarMueble('mueble1'));
     document.getElementById('mueble2-tab').addEventListener('click', () => mostrarMueble('mueble2'));
     document.getElementById('mueble3-tab').addEventListener('click', () => mostrarMueble('mueble3'));
+
+    // Muestra la primera sección al cargar
+    mostrarMueble('como');
 }
 
-function mostrarMueble(mueble) {
-    // Ocultar todos los muebles
-    for (let key in muebles) {
-        muebles[key].style.display = 'none';
+function mostrarMueble(nombre) {
+    // Ocultar todas las secciones
+    for (let mueble in muebles) {
+        muebles[mueble].style.display = 'none';
     }
-
-    // Mostrar el mueble seleccionado
-    if (muebles[mueble]) {
-        muebles[mueble].style.display = 'block';
-    }
+    // Mostrar la sección seleccionada
+    muebles[nombre].style.display = 'block';
 }
